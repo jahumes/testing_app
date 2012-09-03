@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
+gem 'bootstrap-sass'
+# gem 'less-rails-bootstrap'
 gem 'pg', '0.12.2'
 
 group :development, :test do
@@ -17,6 +19,10 @@ group :assets do
 end
 
 gem 'jquery-rails', '2.0.2'
+
+group :production do
+  gem 'sprockets', '~> 2.0'
+end
 
 group :test do
   gem 'capybara', '1.1.2'
