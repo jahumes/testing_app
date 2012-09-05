@@ -4,7 +4,7 @@ gem 'rails', '3.2.8'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'therubyracer'
-gem 'less-rails-bootstrap'
+# gem 'less-rails-bootstrap'
 
 
 group :development, :test do
