@@ -104,4 +104,12 @@ describe User do
     before { @user.save }
     its(:remember_token) { should_not be_blank }
   end
+  describe "accessible attributes" do
+    let(:user_for_admin) { FactoryGirl.create(:user) }
+    it "should not allow access to admin" do
+      expect do
+        User.new(admin: user_for_admin.admin)
+      end.to raise_error(ActiveModel::MassAssignmentSecurity::Error)
+    end
+  end
 end
